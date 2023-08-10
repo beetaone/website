@@ -10,6 +10,11 @@ const ImprintContainer = styled.div`
   height: 100vh;
   width: 100vw;
 
+  @media (max-width: 768px) {
+    padding: 2rem;
+    align-items: flex-start;
+  }
+
   div {
     width: min(90vw, 34rem);
     font-size: 1.2rem;

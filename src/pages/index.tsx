@@ -6,18 +6,33 @@ import MainLayout from '../layout'
 import styled from '@emotion/styled'
 
 const ImprintLink = styled(Link)`
-  position: absolute;
-  bottom: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  height: 5rem;
 `
 
 const Hero = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 100vh;
+  align-items: center;
+  overflow: hidden;
   width: 100vw;
-  padding: 0 16vw;
+  height: calc(100vh - 5rem);
+  padding: 0 16vw 0 16vw;
+  gap: 1.2rem;
+  background-color: transparent;
+
+  @media (max-width: 768px) {
+    height: calc(100vh - 20rem);
+    padding: 0 2rem 0 2rem;
+    a {
+      height: 20rem;
+    }
+  }
   h1 {
     font-family: Neue-Machina;
     font-size: 6rem;
@@ -28,7 +43,6 @@ const Hero = styled.div`
     width: 90%;
     height: 1px;
     background-color: #1b998b;
-    margin: 1.2rem 0;
   }
   p {
     text-align: center;
@@ -51,9 +65,9 @@ const IndexPage: React.FC<PageProps> = () => {
           <br />
           Stay tuned!
         </p>
-
-        <ImprintLink to="/imprint">Imprint</ImprintLink>
       </Hero>
+
+      <ImprintLink to="/imprint">Imprint</ImprintLink>
     </MainLayout>
   )
 }
