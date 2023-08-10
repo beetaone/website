@@ -1,0 +1,144 @@
+@font-face {
+    font-family: Neue-Machina;
+    font-weight: 100 300;
+    font-display: swap;
+    font-style: normal;
+    font-named-instance: 'Light';
+    src: url("/fonts/NeueMachina-Light.otf") format("otf");
+}
+
+@font-face {
+    font-family: Neue-Machina;
+    font-weight: 400 500;
+    font-display: swap;
+    font-style: normal;
+    font-named-instance: 'Regular';
+    src: url("/fonts/NeueMachina-Regular.otf") format("otf");
+}
+
+@font-face {
+    font-family: Neue-Machina;
+    font-weight: 600 900;
+    font-display: swap;
+    font-style: oblique;
+    font-named-instance: 'Bold';
+    src: url("/fonts/NeueMachina-Ultrabold.otf") format("otf");
+}
+
+/* @font-face {
+    font-family: Garet-Book;
+    font-weight: 400 500;
+    font-display: swap;
+    font-style: normal;
+    font-named-instance: 'Regular';
+    src: url(Garet-Book.ttf) format("ttf");
+}
+
+@font-face {
+    font-family: Garet-Book;
+    font-weight: 600 700;
+    font-display: swap;
+    font-style: normal;
+    font-named-instance: 'Bold';
+    src: url(Garet-Heavy.ttf) format("ttf");
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+}
+
+:root {
+    font-family: Neue-Machina, Garet, system-ui;
+}
+
+
+html {
+    font-size: 16px;
+
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: #F3F3F7;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #F3F3F7;
+    text-shadow: 0px 0px 1px #F3F3F7;
+}
+
+body {
+
+    background: linear-gradient(135deg, #2C2E4A 0%, #240B36 100%);
+    color: #F3F3F7;
+    overflow-x: hidden;
+
+
+}
+
+@media (max-width: 1080px) {
+    html {
+        font-size: 14px;
+    }
+
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(255, 253, 250, 1);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #90909A;
+    border-radius: 20px;
+    border: 3px solid rgba(255, 253, 250, 1);
+}
+
+button {
+    display: flex;
+    padding: 0.625rem 0.75rem 0.625rem 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background: #240B36;
+    color: #fff;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5rem;
+    letter-spacing: 0.00938rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:not(:disabled):hover {
+        /* background: #2e345e; */
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    &:disabled {
+        background: #c4c4c4;
+        color: #fff;
+        cursor: not-allowed;
+
+    }
+}
