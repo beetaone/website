@@ -4,27 +4,29 @@ import MainLayout from '../layout'
 import styled from '@emotion/styled'
 
 const ImprintContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
   height: 100vh;
   width: 100vw;
+  overflow-y: auto;
 
+  background-color: transparent;
   @media (max-width: 768px) {
-    padding: 2rem;
     align-items: flex-start;
   }
 
   div {
-    width: min(90vw, 34rem);
+    margin: 2rem auto;
+    width: min(90vw, 36rem);
     font-size: 1.2rem;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
     h1 {
-      font-size: 3rem;
+      font-size: 2rem;
       font-style: normal;
-      font-weight: 900;
+      font-weight: 400;
       line-height: normal;
     }
     p {

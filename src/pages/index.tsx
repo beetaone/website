@@ -19,7 +19,7 @@ const Hero = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+
   width: 100vw;
   height: calc(100vh - 5rem);
   padding: 0 16vw 0 16vw;
@@ -34,7 +34,8 @@ const Hero = styled.div`
     }
   }
   h1 {
-    font-size: 6rem;
+    font-family: 'Neue Machina', sans-serif;
+    font-size: 5rem;
     font-style: normal;
     font-weight: 900;
   }
@@ -45,27 +46,35 @@ const Hero = styled.div`
   }
   p {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-style: normal;
     font-weight: 300;
   }
 `
 
+const HomeContainer = styled.div`
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+`
+
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <MainLayout>
-      <Hero>
-        <h1 className="logo">beeta.one</h1>
-        <div className="line"></div>
-        <p>
-          Re-imagine a world where businesses have the power to unlock the limitless possibilities hidden within their
-          sensor and machine data.
-          <br />
-          Stay tuned!
-        </p>
-      </Hero>
+      <HomeContainer>
+        <Hero>
+          <h1 className="logo">beeta.one</h1>
+          <div className="line"></div>
+          <p>
+            Re-imagine a world where businesses have the power to unlock the limitless possibilities hidden within their
+            sensor and machine data.
+            <br />
+            Stay tuned!
+          </p>
+        </Hero>
 
-      <ImprintLink to="/imprint">Imprint</ImprintLink>
+        <ImprintLink to="/imprint">Imprint</ImprintLink>
+      </HomeContainer>
     </MainLayout>
   )
 }
