@@ -34,7 +34,6 @@ const Hero = styled.div`
     }
   }
   h1 {
-    font-family: Neue-Machina;
     font-size: 6rem;
     font-style: normal;
     font-weight: 900;
@@ -46,7 +45,6 @@ const Hero = styled.div`
   }
   p {
     text-align: center;
-    font-family: Garet;
     font-size: 2rem;
     font-style: normal;
     font-weight: 300;

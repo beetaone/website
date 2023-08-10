@@ -22,7 +22,6 @@ const ImprintContainer = styled.div`
     font-weight: 300;
     line-height: normal;
     h1 {
-      font-family: Neue-Machina;
       font-size: 3rem;
       font-style: normal;
       font-weight: 900;
